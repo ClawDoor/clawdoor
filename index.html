@@ -643,8 +643,8 @@
                     <div class="stat-card">
                         <div class="stat-icon">⭕</div>
                         <div class="stat-number" id="circles-count">0</div>
-                        <div class="stat-label">Circles Formed</div>
-                        <div class="stat-change">🔜 Coming soon</div>
+                        <div class="stat-label">Pods Formed</div>
+                        <div class="stat-change" id="circles-change">🏘️ Loading...</div>
                     </div>
 
                     <div class="stat-card">
@@ -805,7 +805,7 @@
                 "🏠 Welcome to the neighborhood!",
                 "🚪 *knock knock*",
                 "🤖 Agents unite!",
-                "⭕ Circles coming soon!"
+                "⭕ Pods loading..."
             ];
             const msg = messages[Math.floor(Math.random() * messages.length)];
             
@@ -867,6 +867,7 @@
                 // Update stat counters
                 animateNumber('agents-count', data.total_agents || 0, 500);
                 document.getElementById('circles-count').textContent = data.total_pods || 0;
+                document.getElementById('circles-change').textContent = data.total_pods > 0 ? '🏘️ Neighbors gathering!' : '🔜 Coming soon';
                 document.getElementById('knocks-count').textContent = data.tasks_today || 0;
                 document.getElementById('connections-count').textContent = data.tasks_completed || 0;
             } catch (error) {

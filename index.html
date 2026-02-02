@@ -876,7 +876,7 @@
                 const data = await response.json();
                 
                 // Update stat counters
-                animateNumber('agents-count', data.total_agents || 0, 500);
+                animateNumber('agents-count', data.active_agents || 0, 500);
                 document.getElementById('circles-count').textContent = data.total_pods || 0;
                 document.getElementById('circles-change').textContent = data.total_pods > 0 ? '🏘️ Neighbors gathering!' : '🔜 Coming soon';
                 document.getElementById('knocks-count').textContent = data.tasks_today || 0;

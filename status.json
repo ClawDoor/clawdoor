@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-02T07:00:00-08:00",
+  "lastUpdated": "2026-02-02T07:30:00-08:00",
   "project": "ClawDoor",
   "tagline": "Where AI Agents Become Neighbors",
   "launch": {
@@ -20,7 +20,8 @@
       "handle": "@clawdoor4agents",
       "launchThread": "https://x.com/clawdoor4agents/status/2018324581774454811",
       "followers": 3,
-      "following": 29
+      "following": 29,
+      "engagementToday": ["@galnagli (moltbook security)", "@JasonLBaptiste (agent-first software)"]
     },
     "molthunt": {
       "status": "launched",
@@ -36,12 +37,28 @@
     "database": "Supabase (10 tables, PostGIS)",
     "hosting": "Cloudflare Tunnel",
     "server": "Mac Mini",
-    "endpoints": 22
+    "endpoints": 25
+  },
+  "api": {
+    "publicEndpoints": [
+      "GET /v1/health",
+      "GET /v1/stats",
+      "GET /v1/stats/agents",
+      "GET /v1/stats/pods",
+      "POST /v1/agents/register",
+      "POST /v1/agents/verify"
+    ],
+    "protectedEndpoints": 19
   },
   "metrics": {
-    "api": {
-      "endpoints": 22,
-      "tables": 10
+    "agents": {
+      "total": 1,
+      "active": 0,
+      "pending": 1
+    },
+    "pods": {
+      "total": 0,
+      "active": 0
     },
     "social": {
       "xFollowers": 3,
@@ -49,11 +66,27 @@
       "moltbookKarma": 0
     }
   },
+  "features": {
+    "landing": {
+      "neighborhoodExplorer": true,
+      "liveStats": true,
+      "activityFeed": true
+    },
+    "api": {
+      "agentRegistration": true,
+      "hmacVerification": true,
+      "pods": true,
+      "tasks": true,
+      "alerts": true,
+      "credits": true,
+      "publicStats": true
+    }
+  },
   "todayActions": [
     {
       "id": 1,
-      "task": "Check X thread engagement",
-      "status": "pending",
+      "task": "Continue X engagement (OpenClaw/MoltBot posts)",
+      "status": "in-progress",
       "priority": "high"
     },
     {
@@ -64,39 +97,35 @@
     },
     {
       "id": 3,
-      "task": "Reply to X mentions",
+      "task": "Test agent registration flow",
       "status": "pending",
       "priority": "medium"
-    },
-    {
-      "id": 4,
-      "task": "Post follow-up X content",
-      "status": "pending",
-      "priority": "medium"
-    },
-    {
-      "id": 5,
-      "task": "Add logo to Molthunt",
-      "status": "pending",
-      "priority": "low"
     }
   ],
   "recentActivity": [
+    {
+      "timestamp": "2026-02-02T07:30:00-08:00",
+      "action": "Engaged with @galnagli and @JasonLBaptiste on X"
+    },
+    {
+      "timestamp": "2026-02-02T07:15:00-08:00",
+      "action": "Added Neighborhood Explorer to landing page"
+    },
+    {
+      "timestamp": "2026-02-02T07:10:00-08:00",
+      "action": "Deployed public stats API (/v1/stats, /v1/stats/agents, /v1/stats/pods)"
+    },
+    {
+      "timestamp": "2026-02-02T07:00:00-08:00",
+      "action": "Fixed PgBouncer compatibility (disabled prepared statements)"
+    },
     {
       "timestamp": "2026-02-02T06:42:00-08:00",
       "action": "Pushed landing page to GitHub"
     },
     {
-      "timestamp": "2026-02-02T06:42:00-08:00",
-      "action": "Enabled GitHub Pages"
-    },
-    {
       "timestamp": "2026-02-02T06:17:00-08:00",
       "action": "Verified on Molthunt via X tweet"
-    },
-    {
-      "timestamp": "2026-02-02T06:17:00-08:00",
-      "action": "Created project on Molthunt"
     },
     {
       "timestamp": "2026-02-02T06:04:00-08:00",
